@@ -1,0 +1,43 @@
+@import './variables.css';
+
+.color-picker * {
+  box-sizing: border-box;
+}
+
+.color-picker {
+  margin-top: 24px;
+  background-color: var(--color-picker-background);
+  display: flex;
+  flex-direction: column;
+  width: 248px;
+  user-select: none;
+}
+
+.color-picker__pointer {
+  position: absolute;
+  cursor: pointer;
+  top: 1px;
+  height: 12px;
+  width: 12px;
+  border: 1px solid var(--color-picker-pointer-border);
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.color-picker__child-point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3px;
+  width: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.33s;
+}
+
+.color-picker__child-point--active {
+  opacity: 1;
+}

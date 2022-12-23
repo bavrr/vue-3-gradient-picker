@@ -1,0 +1,7 @@
+.color-picker {
+  --color-picker-border: #bbbfc5;
+  --color-picker-background: #ffffff;
+  --color-picker-pointer-border: white;
+  --color-picker-degree-border: #bbbfc5;
+  --color-picker-degree-pointer: #bbbfc5;
+}
