@@ -1,16 +1,7 @@
-# Vue 3 + TypeScript + Vite
+The gradient picker package is a customizable color gradient picker built with Vue 3, TypeScript, and Vite. It is based on the [Vue Color Gradient Picker library](https://github.com/arthay/vue-color-gradient-picker) and provides an intuitive and user-friendly interface for selecting colors for a gradient.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The package includes a range of options for customizing the gradient, such as the number of colors, the start and end points, and the direction of the gradient. The user can choose from a variety of color formats, including HEX, RGB, and HSL, and can also adjust the opacity and saturation of the colors.
 
-## Recommended IDE Setup
+The package is easy to install and use, with a straightforward API. It is also highly customizable, with a range of options for styling the gradient picker to match the design of any application or website.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+Overall, the gradient picker package is a powerful and flexible tool for selecting and customizing color gradients in Vue 3 applications. Whether you're building a simple prototype or a complex web application, this package can help you create beautiful and responsive color gradients with ease.
