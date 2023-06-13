@@ -7,7 +7,7 @@ export const generateSolidStyle = (colorPoint: ColorPoint): string =>
 export const generateGradientStyle = (
   points: GradientColorPoint[],
   type: GradientType,
-  degree: Degree
+  degree: Degree,
 ): string => {
   let style = '';
   const sortedPoints = points.slice();

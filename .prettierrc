@@ -1,5 +1,10 @@
 {
   "singleQuote": true,
   "semi": true,
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+  "endOfLine": "lf",
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "trailingComma": "all",
+  "useTabs": false
 }

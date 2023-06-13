@@ -11,3 +11,4 @@ const AddPointKey: InjectionKey<(position: Left) => void> =
   Symbol('AddPointKey');
 
 export { DeletePointKey, SetActivePointKey, AddPointKey };
+

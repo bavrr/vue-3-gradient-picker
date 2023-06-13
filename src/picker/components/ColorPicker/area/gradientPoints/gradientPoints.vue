@@ -102,7 +102,7 @@
 
         const leftPosition = getGradientPointPercent(
           offsetX,
-          sliderWidth.value
+          sliderWidth.value,
         );
 
         addPoint(leftPosition);
