@@ -1,26 +1,25 @@
 import getAlpha from './helpers/getAlpha';
-import getHsv from './helpers/getHsv';
+import getHsva from './helpers/getHsva';
 import getHue from './helpers/getHue';
-import getRgbByHue from './helpers/getRgbByHue';
-import hexToRgb from './helpers/hexToRgb';
-import hsvToRgb from './helpers/hsvToRgb';
-import rgbToHex from './helpers/rgbToHex';
-import rgbToHsv from './helpers/rgbToHsv';
+import getRgbaByHue from './helpers/getRgbaByHue';
+import hexToRgba from './helpers/hexToRgba';
+import hsvaToRgba from './helpers/hsvaToRgba';
+import rgbaToHex from './helpers/rgbaToHex';
+import rgbaToHsva from './helpers/rgbaToHsva';
 import getGradientPointPercent from './helpers/getGradientPointPercent';
 import calculateDegree from './helpers/calculateDegree';
 
-export * from './types';
 export * from './helpers/generateStyles';
 
 export {
   getAlpha,
-  getHsv,
+  getHsva,
   getHue,
-  getRgbByHue,
-  hexToRgb,
-  hsvToRgb,
-  rgbToHex,
-  rgbToHsv,
+  getRgbaByHue,
+  hexToRgba,
+  hsvaToRgba,
+  rgbaToHex,
+  rgbaToHsva,
   getGradientPointPercent,
   calculateDegree,
 };

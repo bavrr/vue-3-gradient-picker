@@ -6,5 +6,7 @@ export * from './saturation';
 export * from './value';
 export * from './gradientType';
 export * from './degree';
-export * from './hsv';
+export * from './hsva';
 export * from './left';
+export * from './actionType';
+export * from './position';
