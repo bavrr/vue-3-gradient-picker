@@ -1,5 +1,4 @@
-import { PositionX, PositionY } from '@/picker/composables/useActionEvents';
-import { Degree } from '../types';
+import { Degree, PositionX, PositionY } from '@/picker/types';
 
 export default (position: {
   positionX: PositionX;

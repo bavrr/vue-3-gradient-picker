@@ -1,7 +1,10 @@
-import { ColorPoint } from '../../classes';
-import { Hue } from '../types';
+import { ColorPoint } from '@/picker/classes';
+import { Hue, ColorIntensity, AlphaIntensity } from '@/picker/types';
 
-export default (hue: Hue): ColorPoint => {
+export default function <T extends number = 1>(
+  hue: Hue,
+  alpha: AlphaIntensity<T>,
+): ColorPoint<T> {
   const H = hue / 60;
 
   const C = 1;
@@ -52,10 +55,10 @@ export default (hue: Hue): ColorPoint => {
       throw new Error('Math error');
   }
 
-  return {
-    red: Math.round(r * precision),
-    green: Math.round(g * precision),
-    blue: Math.round(b * precision),
-    alpha: 1,
-  } as ColorPoint;
-};
+  return new ColorPoint<T>({
+    red: Math.round(r * precision) as ColorIntensity,
+    green: Math.round(g * precision) as ColorIntensity,
+    blue: Math.round(b * precision) as ColorIntensity,
+    alpha: alpha,
+  });
+}

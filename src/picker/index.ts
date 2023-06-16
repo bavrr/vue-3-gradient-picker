@@ -1,7 +1,5 @@
 export { default as ColorPicker } from './components/ColorPicker/index.vue';
 export * from './classes';
-export * from './utils/types';
-export * from './composables/useActionEvents/types/actionType';
-export * from './composables/useActionEvents/types/position';
+export * from './types';
 
-import './styles/index.css';
+import './assets/styles/index.css';

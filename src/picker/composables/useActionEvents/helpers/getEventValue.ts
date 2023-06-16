@@ -1,4 +1,4 @@
-import { ActionEvent } from '../types/actionType';
+import { ActionEvent } from '@/picker/types';
 import eventTypeGuard from './eventTypeGuard';
 
 export default (event: ActionEvent, type: 'X' | 'Y') => {

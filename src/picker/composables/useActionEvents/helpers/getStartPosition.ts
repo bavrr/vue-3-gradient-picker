@@ -1,5 +1,4 @@
-import { ActionEvent } from '../types/actionType';
-import { Position } from '../types/position';
+import { Position, ActionEvent } from '@/picker/types';
 
 import getEventValue from './getEventValue';
 

@@ -1,5 +1,4 @@
-import { Degree } from '../utils';
-import { GradientType } from '../utils/types/gradientType';
+import { Degree, GradientType } from '@/picker/types';
 import GradientColorPoint from './gradientColorPoint';
 
 export default class Gradient {
@@ -19,7 +18,7 @@ export default class Gradient {
           blue: 0,
           alpha: 1,
         },
-        20
+        20,
       ),
       new GradientColorPoint(
         {
@@ -28,10 +27,10 @@ export default class Gradient {
           blue: 0,
           alpha: 1,
         },
-        100
+        100,
       ),
     ],
-    style = ''
+    style = '',
   ) {
     this.type = type;
     this.degree = degree;

@@ -1,4 +1,4 @@
-import { Degree, GradientType } from '../types';
+import { Degree, GradientType } from '@/picker/types';
 import { ColorPoint, GradientColorPoint } from '../../classes';
 
 export const generateSolidStyle = (colorPoint: ColorPoint): string =>

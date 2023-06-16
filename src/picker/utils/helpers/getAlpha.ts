@@ -1,4 +1,4 @@
-import { PositionX } from '../../composables/useActionEvents';
+import { PositionX } from '@/picker/types';
 
 export default (positionX: PositionX, width: number) => {
   const alpha = Number((positionX / width).toFixed(2));

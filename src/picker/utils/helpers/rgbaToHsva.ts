@@ -1,7 +1,7 @@
-import { ColorPoint } from '../../classes';
-import { HSV } from '../types';
+import { ColorPoint } from '@/picker/classes';
+import { HSVA } from '@/picker/types';
 
-export default (colorPoint: ColorPoint) => {
+export default function <T extends number = 1>(colorPoint: ColorPoint<T>) {
   let rr;
   let gg;
   let bb;
@@ -14,6 +14,7 @@ export default (colorPoint: ColorPoint) => {
   const v = Math.max(rabs, gabs, babs);
   const diff = v - Math.min(rabs, gabs, babs);
   const diffc = (c: number) => (v - c) / 6 / diff + 1 / 2;
+
   if (diff === 0) {
     h = 0;
     s = 0;
@@ -30,10 +31,9 @@ export default (colorPoint: ColorPoint) => {
     } else if (babs === v) {
       h = 2 / 3 + gg - rr;
     }
+
     if (h && h < 0) {
       h += 1;
-    } else if (h && h > 1) {
-      h -= 1;
     }
   }
 
@@ -41,5 +41,6 @@ export default (colorPoint: ColorPoint) => {
     hue: h === undefined ? 0 : Math.round(h * 360),
     saturation: Math.round(s * 100),
     value: Math.round(v * 100),
-  } as HSV;
-};
+    alpha: colorPoint.alpha,
+  } as HSVA<T>;
+}

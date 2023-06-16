@@ -1,20 +1,20 @@
-import { HSV } from '../types';
-import setRGBA from './setRgba';
+import { HSVA } from '@/picker/types';
+import setRgba from '@/picker/utils/helpers/setRgba';
 
-export default (hsv: HSV) => {
+export default function <T extends number = 1>(hsva: HSVA<T>) {
   const precision = 255;
 
-  const lig = hsv.value / 100;
-  const sat = hsv.saturation / 100;
-  const H = hsv.hue / 60;
+  const lig = hsva.value / 100;
+  const sat = hsva.saturation / 100;
+  const H = hsva.hue / 60;
 
   let C = sat * lig;
   let X = C * (1 - Math.abs((H % 2) - 1));
   let m = lig - C;
 
-  C = Math.floor((C + m) * precision);
-  X = Math.floor((X + m) * precision);
-  m = Math.floor(m * precision);
+  C = Math.round((C + m) * precision);
+  X = Math.round((X + m) * precision);
+  m = Math.round(m * precision);
 
   let r = 0;
   let g = 0;
@@ -60,10 +60,10 @@ export default (hsv: HSV) => {
       throw new Error('Math error');
   }
 
-  return setRGBA({
+  return setRgba({
     red: r,
     green: g,
     blue: b,
-    alpha: 1,
+    alpha: hsva.alpha,
   });
-};
+}

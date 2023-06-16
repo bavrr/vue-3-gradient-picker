@@ -1,6 +1,5 @@
 import { ref, onBeforeUnmount } from 'vue';
-import { ActionEvent } from './types/actionType';
-import { Position } from './types/position';
+import { Position, ActionEvent } from '@/picker/types';
 import eventTypeGuard from './helpers/eventTypeGuard';
 import getStartPosition from './helpers/getStartPosition';
 import preventDefault from './helpers/preventDefault';
@@ -88,14 +87,14 @@ export default (element: HTMLElement, isPoint = false) => {
     element,
     startAction,
     stopAction,
-    changePosition
+    changePosition,
   );
 
   touchLogic = touchEventsLogic(
     element,
     startAction,
     stopAction,
-    changePosition
+    changePosition,
   );
 
   initiateListeners();

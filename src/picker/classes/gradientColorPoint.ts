@@ -1,8 +1,8 @@
-import { AlphaIntensity, ColorIntensity, Left } from '../utils';
+import { AlphaIntensity, ColorIntensity, Left } from '@/picker/types';
 import ColorPoint from './colorPoint';
 
 export default class GradientColorPoint<
-  Alpha extends number = 1
+  Alpha extends number = 1,
 > extends ColorPoint<Alpha> {
   left: Left;
 
@@ -18,7 +18,7 @@ export default class GradientColorPoint<
       blue: ColorIntensity;
       alpha: AlphaIntensity<Alpha>;
     },
-    left: Left
+    left: Left,
   ) {
     super({
       red,

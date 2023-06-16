@@ -1,4 +1,4 @@
-import { AlphaIntensity, ColorIntensity } from '../utils';
+import { AlphaIntensity, ColorIntensity } from '@/picker/types';
 
 export default class ColorPoint<Alpha extends number = 1> {
   red: ColorIntensity;
@@ -22,7 +22,7 @@ export default class ColorPoint<Alpha extends number = 1> {
       green: 150,
       blue: 0,
       alpha: 1 as AlphaIntensity<Alpha>,
-    }
+    },
   ) {
     this.red = red;
     this.green = green;

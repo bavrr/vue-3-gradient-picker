@@ -1,10 +1,10 @@
-import { ActionEvent } from './types/actionType';
+import { ActionEvent } from '@/picker/types';
 
 export default (
   element: HTMLElement,
   startAction: (event: ActionEvent) => void,
   stopAction: (event: ActionEvent) => void,
-  changePosition: (event: ActionEvent) => void
+  changePosition: (event: ActionEvent) => void,
 ) => ({
   initiateTouchListeners() {
     element.addEventListener('touchstart', startAction, {

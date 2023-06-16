@@ -1,7 +1,15 @@
-import { PositionX } from '../../composables/useActionEvents';
-import { Left } from '../types';
+import { Left, PositionX } from '@/picker/types';
 
 export default (offsetX: PositionX, width: number) => {
   const leftPercent = Math.floor((offsetX * 100) / width);
-  return (leftPercent < 0 ? 0 : leftPercent > 100 ? 100 : leftPercent) as Left;
+
+  if (leftPercent < 0) {
+    return 0 satisfies Left;
+  }
+
+  if (leftPercent > 100) {
+    return 100 satisfies Left;
+  }
+
+  return leftPercent as Left;
 };

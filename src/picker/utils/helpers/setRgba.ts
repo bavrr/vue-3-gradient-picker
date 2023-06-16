@@ -1,5 +1,5 @@
-import { ColorPoint } from '../../classes';
-import { ColorIntensity, AlphaIntensity } from '../types';
+import { ColorPoint } from '@/picker/classes';
+import { ColorIntensity, AlphaIntensity } from '@/picker/types';
 
 const isValidRGBValue = (colorValue: number): colorValue is ColorIntensity =>
   typeof colorValue === 'number' &&
@@ -8,7 +8,7 @@ const isValidRGBValue = (colorValue: number): colorValue is ColorIntensity =>
   colorValue <= 255;
 
 const isValidAlpha = (
-  colorValue: number
+  colorValue: number,
 ): colorValue is AlphaIntensity<typeof colorValue> =>
   typeof colorValue === 'number' &&
   Number.isNaN(colorValue) === false &&

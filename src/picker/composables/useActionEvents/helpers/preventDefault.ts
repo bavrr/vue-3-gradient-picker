@@ -1,4 +1,4 @@
-import { ActionEvent } from '../types/actionType';
+import { ActionEvent } from '@/picker/types';
 
 export default (event: ActionEvent) => {
   if (event.cancelable) {
