@@ -13,7 +13,7 @@ const isValidAlpha = (
   typeof colorValue === 'number' &&
   Number.isNaN(colorValue) === false &&
   colorValue >= 0 &&
-  colorValue <= 100;
+  colorValue <= 1;
 
 export default (colorPoint: {
   red: number;

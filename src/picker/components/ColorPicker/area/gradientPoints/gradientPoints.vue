@@ -34,11 +34,7 @@
     getGradientPointPercent,
   } from '../../../../utils';
   import { GradientColorPoint } from '../../../../classes';
-  import {
-    ActionEvent,
-    PositionX,
-    PositionY,
-  } from '../../../../composables/useActionEvents';
+  import { ActionEvent, PositionX, PositionY } from '@/picker/types';
   import getEventValue from '../../../../composables/useActionEvents/helpers/getEventValue';
   import { AddPointKey } from '@/picker/utils/const/injectKeys';
 

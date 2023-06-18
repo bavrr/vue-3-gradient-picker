@@ -8,6 +8,7 @@ import rgbaToHex from './helpers/rgbaToHex';
 import rgbaToHsva from './helpers/rgbaToHsva';
 import getGradientPointPercent from './helpers/getGradientPointPercent';
 import calculateDegree from './helpers/calculateDegree';
+import setRgba from './helpers/setRgba';
 
 export * from './helpers/generateStyles';
 
@@ -22,4 +23,5 @@ export {
   rgbaToHsva,
   getGradientPointPercent,
   calculateDegree,
+  setRgba,
 };

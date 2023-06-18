@@ -11,9 +11,9 @@
 <script lang="ts">
   import { computed, defineComponent, PropType, ref, watch } from 'vue';
   import ColorPickerInput from '../../../ui/input/input.vue';
-  import { rgbToHex, hexToRgb } from '../../../../utils';
+  import { rgbToHex, hexToRgba } from '../../../../utils';
   import { ColorPoint } from '../../../../classes';
-  import setRgba from '@/picker/utils/helpers/setRgba';
+  import { setRgba } from '@/picker/utils';
 
   export default defineComponent({
     name: 'ColorPickerHEXBlock',
@@ -36,11 +36,11 @@
           return localHex.value;
         },
         set(hexString: string) {
-          if (hexString.length > 6) {
+          if (hexString.length > 8) {
             return;
           }
 
-          const color = hexToRgb(hexString);
+          const color = hexToRgba(hexString);
 
           localHex.value = hexString;
 
@@ -64,7 +64,7 @@
           if (progress.value !== true) {
             localHex.value = rgbToHex(props.modelValue);
           }
-        }
+        },
       );
 
       return {

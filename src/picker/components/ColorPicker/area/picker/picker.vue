@@ -23,7 +23,7 @@
     watch,
   } from 'vue';
   import { ColorPoint } from '../../../../classes';
-  import { getHsv, hsvToRgb, getRgbByHue, HSV } from '../../../../utils';
+  import { getHsva, hsvToRgb, getRgbByHue, HSVA } from '../../../../utils';
 
   export default defineComponent({
     name: 'ColorPickerPickerArea',
@@ -33,27 +33,27 @@
         required: true,
       },
       hsv: {
-        type: Object as PropType<HSV>,
+        type: Object as PropType<HSVA>,
         required: true,
       },
     },
     emits: {
       'update:modelValue': (colorPoint: ColorPoint) => colorPoint,
-      'update:hsv': (hsv: HSV) => hsv,
+      'update:hsv': (hsv: HSVA) => hsv,
     },
     setup(props, { emit }) {
       const areaWidth = ref(0);
       const areaHeight = ref(0);
 
       const pickerOffsetHorizontal = computed(
-        () => Math.floor((props.hsv.saturation * areaWidth.value) / 100) - 6
+        () => Math.floor((props.hsv.saturation * areaWidth.value) / 100) - 6,
       );
 
       const pickerOffsetVertical = computed(
         () =>
           Math.floor(
-            areaHeight.value - (props.hsv.value * areaHeight.value) / 100
-          ) - 6
+            areaHeight.value - (props.hsv.value * areaHeight.value) / 100,
+          ) - 6,
       );
 
       const pointerStyle = computed(() => ({
@@ -78,12 +78,12 @@
           const { position } = useActionEvents(pickerAreaRef.value);
 
           watch(position, () => {
-            const hsv = getHsv(
+            const hsv = getHsva(
               position.value.positionX,
               position.value.positionY,
               areaHeight.value,
               areaWidth.value,
-              props.hsv.hue
+              props.hsv.hue,
             );
 
             emit('update:modelValue', hsvToRgb(hsv) ?? props.modelValue);

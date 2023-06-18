@@ -8,7 +8,6 @@
   import { computed, defineComponent, PropType, ref } from 'vue';
   import ColorPickerArea from '../area/area.vue';
   import ColorPickerInputBlock from '../inputBlock/inputBlock.vue';
-
   import { generateSolidStyle, rgbToHsv } from '../../../utils';
   import { Color } from '../../../classes';
 
@@ -28,7 +27,6 @@
     emits: {
       'update:modelValue': (color: Color) => color,
     },
-
     setup(props, { emit }) {
       const color = computed({
         get() {
